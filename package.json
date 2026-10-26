@@ -1,0 +1,14 @@
+{
+  "name": "fitness-workout-planner",
+  "version": "0.1.0",
+  "private": true,
+  "description": "SW 302 Fitness & Workout Planner — Phase 2 static prototype setup",
+  "scripts": {
+    "dev": "tailwindcss -i ./frontend/src/styles/input.css -o ./frontend/assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./frontend/src/styles/input.css -o ./frontend/assets/css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
