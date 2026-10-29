@@ -1,6 +1,9 @@
-@import "tailwindcss" source("../../");
+@import "tailwindcss" source(none);
+@config "../../../tailwind.config.js";
 
 @theme {
+  --color-*: initial;
+
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Kanit", ui-sans-serif, system-ui, sans-serif;
 
@@ -46,56 +49,63 @@
   --container-page: 84rem;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --color-canvas: #0a0b0a;
-    --color-surface: #141614;
-    --color-surface-muted: #1e211d;
-    --color-line: #2b2f29;
-    --color-line-strong: #868d80;
-    --color-ink: #f4f7ef;
-    --color-ink-muted: #b4bcaa;
-    --color-primary: #c6f432;
-    --color-primary-hover: #d9ff6b;
-    --color-primary-soft: #26330a;
-    --color-on-primary: #0a0b0a;
-    --color-energy: #c6f432;
-    --color-accent: #ff8a4c;
-    --color-accent-soft: #3a1a0c;
-    --color-success: #4ade80;
-    --color-warning: #facc15;
-    --color-danger: #f87171;
-    --color-danger-hover: #fca5a5;
-    --color-danger-soft: #3b1518;
-    --color-on-danger: #1a0505;
-    --color-beginner: #86efac;
-    --color-beginner-soft: #13301f;
-    --color-intermediate: #fcd34d;
-    --color-intermediate-soft: #3a2c0a;
-    --color-advanced: #fca5a5;
-    --color-advanced-soft: #3b1518;
-    --color-chart-legs: #c6f432;
-    --color-chart-chest: #ff8a4c;
-    --color-chart-back: #8b5cf6;
-    --color-chart-cardio: #14b8a6;
-    --color-chart-core: #f0abfc;
-    --color-scrim: #000000;
-    --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B4BCAA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    color-scheme: light;
+    --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A5044' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+
+    @variant dark {
+      color-scheme: dark;
+      --color-canvas: #0a0b0a;
+      --color-surface: #141614;
+      --color-surface-muted: #1e211d;
+      --color-line: #2b2f29;
+      --color-line-strong: #868d80;
+      --color-ink: #f4f7ef;
+      --color-ink-muted: #b4bcaa;
+      --color-primary: #c6f432;
+      --color-primary-hover: #d9ff6b;
+      --color-primary-soft: #26330a;
+      --color-on-primary: #0a0b0a;
+      --color-energy: #c6f432;
+      --color-accent: #ff8a4c;
+      --color-accent-soft: #3a1a0c;
+      --color-success: #4ade80;
+      --color-warning: #facc15;
+      --color-danger: #f87171;
+      --color-danger-hover: #fca5a5;
+      --color-danger-soft: #3b1518;
+      --color-on-danger: #1a0505;
+      --color-beginner: #86efac;
+      --color-beginner-soft: #13301f;
+      --color-intermediate: #fcd34d;
+      --color-intermediate-soft: #3a2c0a;
+      --color-advanced: #fca5a5;
+      --color-advanced-soft: #3b1518;
+      --color-chart-legs: #c6f432;
+      --color-chart-chest: #ff8a4c;
+      --color-chart-back: #8b5cf6;
+      --color-chart-cardio: #14b8a6;
+      --color-chart-core: #f0abfc;
+      --color-scrim: #000000;
+      --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B4BCAA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    }
   }
 }
 
 @layer base {
-  :root {
-    color-scheme: light dark;
-    --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234A5044' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-  }
-
   body {
     @apply bg-canvas text-ink antialiased;
   }
 
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
   }
 
   summary {
@@ -105,25 +115,17 @@
   summary::-webkit-details-marker {
     display: none;
   }
-
-  .font-display {
-    font-style: italic;
-    letter-spacing: -0.01em;
-  }
-
-  main h1::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    height: 0.375rem;
-    margin-top: 0.625rem;
-    border-radius: 2px;
-    background: var(--color-energy);
-    transform: skewX(-20deg);
-  }
 }
 
 @layer components {
+  .page-title {
+    @apply energy-bar font-display text-2xl font-semibold md:text-3xl;
+  }
+
+  .section-title {
+    @apply font-display text-xl font-semibold;
+  }
+
   .skip-link {
     @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:rounded-lg focus:bg-surface focus:px-4 focus:py-3 focus:font-semibold focus:text-primary focus:shadow-xl;
   }
@@ -139,8 +141,7 @@
   }
 
   .btn-primary {
-    @apply bg-primary font-bold text-on-primary hover:bg-primary-hover;
-    box-shadow: 0 6px 18px -8px var(--color-energy);
+    @apply bg-primary font-bold text-on-primary shadow-energy hover:bg-primary-hover;
   }
 
   .btn-secondary {
@@ -231,7 +232,7 @@
   }
 
   .nav-link {
-    @apply flex h-11 items-center gap-3 rounded-lg px-3 font-medium text-ink-muted hover:bg-surface-muted hover:text-ink aria-[current=page]:bg-primary-soft aria-[current=page]:text-primary aria-[current=page]:shadow-[inset_3px_0_0_var(--color-ink)] aria-[current=true]:bg-primary-soft aria-[current=true]:text-primary aria-[current=true]:shadow-[inset_3px_0_0_var(--color-ink)];
+    @apply flex h-11 items-center gap-3 rounded-lg px-3 font-medium text-ink-muted hover:bg-surface-muted hover:text-ink current:bg-primary-soft current:text-primary current:shadow-[inset_3px_0_0_var(--color-ink)];
   }
 
   .progress {
@@ -248,5 +249,23 @@
 
   .progress::-moz-progress-bar {
     @apply rounded-full bg-primary;
+  }
+}
+
+@utility font-display {
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+@utility energy-bar {
+  &::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 0.375rem;
+    margin-top: 0.625rem;
+    border-radius: 2px;
+    background-color: var(--color-energy);
+    transform: skewX(-20deg);
   }
 }
