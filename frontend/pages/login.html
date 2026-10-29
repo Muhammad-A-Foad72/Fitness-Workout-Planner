@@ -84,11 +84,15 @@
                     <span class="font-display text-2xl font-bold">RepWise</span>
                 </a>
                 <!-- Heading -->
-                <h1 class="font-display text-3xl font-bold mb-3">
+                <h1 class="page-title mb-3">
                     Welcome back
                 </h1>
                 <p class="text-ink-muted mb-8">
                     Log in to continue your fitness journey.
+                </p>
+                <p id="reset-sent" class="mb-6 hidden items-start gap-2 font-medium text-success target:flex" role="status">
+                    <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                    Check your email for a link to reset your password.
                 </p>
                 <!-- Form -->
                 <form action="dashboard.html" method="get">
@@ -126,9 +130,9 @@
                                    class="check">
                             Remember me
                         </label>
-                        <a href="#" class="link text-sm">
+                        <button type="button" class="link text-sm" popovertarget="reset-dialog">
                             Forgot password?
-                        </a>
+                        </button>
                     </div>
                     <!-- Login Button -->
                     <button type="submit" class="btn btn-primary w-full">
@@ -143,6 +147,28 @@
                     </a>
                 </p>
             </div>
+            <!-- Reset Password Dialog -->
+            <dialog id="reset-dialog" popover
+                    class="mx-0 mt-auto mb-0 w-full max-w-none rounded-t-2xl bg-surface p-4 pb-6 text-ink shadow-xl backdrop:bg-scrim/50
+                           sm:m-auto sm:max-w-md sm:rounded-2xl sm:p-6"
+                    aria-labelledby="reset-title">
+                <h2 id="reset-title" class="section-title">Reset your password</h2>
+                <p class="mt-2 text-ink-muted">
+                    Enter your email and we will send you a link to choose a new password.
+                </p>
+                <form class="mt-5 flex flex-col gap-5" action="login.html#reset-sent">
+                    <div>
+                        <label for="reset-email" class="field-label">Email Address</label>
+                        <input id="reset-email" name="reset-email" type="email" class="field"
+                               autocomplete="email" required autofocus>
+                    </div>
+                    <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+                        <button type="button" class="btn btn-secondary"
+                                popovertarget="reset-dialog" popovertargetaction="hide">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Send reset link</button>
+                    </div>
+                </form>
+            </dialog>
         </main>
     </div>
 </body>
