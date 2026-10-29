@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | FitPlanner</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+        <!-- Brand Panel -->
+        <section class="hidden lg:flex bg-[#0F766E] text-white
+                        p-12 flex-col justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="text-3xl font-bold">
+                FitPlanner
+            </a>
+            <div class="max-w-lg">
+                <h2 class="text-4xl font-bold leading-tight mb-5">
+                    Start your fitness journey today.
+                </h2>
+                <p class="text-lg mb-10">
+                    Create your account, build workout plans,
+                    track your progress, and reach your goals.
+                </p>
+                <!-- Dashboard Preview -->
+                <div class="bg-white text-slate-900 rounded-2xl
+                            p-6 shadow-xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-lg">
+                            Your Fitness Goals
+                        </h3>
+                        <span class="bg-[#E6F4F1] text-[#0F766E]
+                                     text-sm px-3 py-1 rounded-lg">
+                            Weekly Plan
+                       </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-[#E6F4F1] p-4 rounded-xl">
+                            <p class="text-sm text-[#475569]">
+                                Weekly Workouts
+                            </p>
+                            <p class="text-2xl font-bold text-[#0F766E] mt-2">
+                                5 Days
+                            </p>
+                        </div>
+                        <div class="bg-[#FFEDD5] p-4 rounded-xl">
+                            <p class="text-sm text-[#475569]">
+                                Daily Goal
+                            </p>
+                            <p class="text-2xl font-bold text-[#C2410C] mt-2">
+                                60 Min
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-sm font-semibold mb-3">
+                        Build healthy habits, one workout at a time.
+                    </p>
+                    <div class="w-full bg-slate-200 h-3 rounded-full">
+
+                        <div class="bg-[#0F766E] w-3/4 h-3 rounded-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm">
+                © 2026 FitPlanner. All rights reserved.
+            </p>
+
+        </section>
+
+
+        <!-- Register Form Section -->
+        <section class="flex items-center justify-center
+                        px-5 py-12 sm:px-8">
+
+            <div class="w-full max-w-md bg-white border
+                        border-slate-200 rounded-2xl
+                        shadow-sm p-6 sm:p-10">
+                <!-- Mobile Logo -->
+                <a href="index.html"
+                   class="lg:hidden block text-2xl font-bold
+                          text-[#0F766E] mb-8">
+                    FitPlanner
+                </a>
+                <!-- Heading -->
+                <h1 class="text-3xl font-bold mb-3">
+                    Create your account
+                </h1>
+                <p class="text-[#475569] mb-8">
+                    Join FitPlanner and start reaching your fitness goals.
+                </p>
+                <!-- Register Form -->
+                <form>
+
+                    <!-- Full Name -->
+                    <div class="mb-5">
+
+                        <label for="fullname"
+                               class="block font-semibold text-sm mb-2">
+                            Full Name
+                        </label>
+                        <input type="text"
+                               id="fullname"
+                               name="fullname"
+                               placeholder="Enter your full name"
+                               autocomplete="name"
+                               required
+                               class="w-full px-4 py-3 border border-slate-300
+                                      rounded-lg outline-none
+                                      focus:border-[#0F766E]
+                                      focus:ring-2 focus:ring-[#0F766E]">
+                    </div>
+                    <div class="mb-5">
+                        <label for="email"
+                               class="block font-semibold text-sm mb-2">
+                            Email Address
+                        </label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               autocomplete="email"
+                               required
+                               class="w-full px-4 py-3 border border-slate-300
+                                      rounded-lg outline-none
+                                      focus:border-[#0F766E]
+                                      focus:ring-2 focus:ring-[#0F766E]">
+                    </div>
+                    <!-- Password -->
+                    <div class="mb-5">
+                        <label for="password"
+                               class="block font-semibold text-sm mb-2">
+                            Password
+                        </label>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Create a password"
+                               autocomplete="new-password"
+                               minlength="8"
+                               required
+                               class="w-full px-4 py-3 border border-slate-300
+                                      rounded-lg outline-none
+                                      focus:border-[#0F766E]
+                                      focus:ring-2 focus:ring-[#0F766E]">
+                        <p class="text-xs text-[#475569] mt-2">
+                            Password must be at least 8 characters.
+                        </p>
+                    </div>
+                    <!-- Confirm Password -->
+                    <div class="mb-6">
+                        <label for="confirm-password"
+                               class="block font-semibold text-sm mb-2">
+                            Confirm Password
+                        </label>
+                        <input type="password"
+                               id="confirm-password"
+                               name="confirm-password"
+                               placeholder="Confirm your password"
+                               autocomplete="new-password"
+                               minlength="8"
+                               required
+                               class="w-full px-4 py-3 border border-slate-300
+                                      rounded-lg outline-none
+                                      focus:border-[#0F766E]
+                                      focus:ring-2 focus:ring-[#0F766E]">
+                    </div>
+                    <div class="mb-7">
+                        <label class="flex items-start gap-3
+                                      text-sm text-[#475569]">
+                            <input type="checkbox"
+                                   name="terms"
+                                   required
+                                   class="w-4 h-4 mt-1 accent-[#0F766E]">
+                            <span>
+                                I agree to the
+                                <a href="#"
+                                   class="text-[#0F766E] font-semibold
+                                          hover:underline">
+                                    Terms of Service
+                                </a>
+                                and
+                                <a href="#"
+                                   class="text-[#0F766E] font-semibold
+                                          hover:underline">
+                                    Privacy Policy
+                                </a>
+                            </span>
+                        </label>
+                    </div>
+                    <!-- Create Account Button -->
+                    <button type="button"
+                            class="w-full bg-[#0F766E] text-white
+                                   font-semibold py-3 rounded-lg
+                                   hover:bg-[#115E59]
+                                   focus:outline-none focus:ring-2
+                                   focus:ring-[#0F766E]">
+                        Create Account
+                    </button>
+                </form>
+                <!-- Login Link -->
+                <p class="text-center text-sm text-[#475569] mt-7">
+
+                    Already have an account?
+
+                    <a href="login.html"
+                       class="font-semibold text-[#0F766E]
+                              hover:underline">
+                        Log in
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

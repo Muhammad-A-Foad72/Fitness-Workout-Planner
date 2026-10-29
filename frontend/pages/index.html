@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPlanner </title>
+     <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+    <header class="bg-white border-b border-slate-200">
+        <nav class="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
+
+            <a href="index.html" class="text-2xl font-bold text-[#0F766E]">FitPlanner
+            </a>
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center gap-7">
+                <a href="#features" class="text-[#475569] hover:text-[#0F766E]">
+                </a>
+                <a href="#how-it-works" class="text-[#475569] hover:text-[#0F766E]">
+                </a>
+                <a href="login.html" class="text-[#0F766E] font-semibold">
+                </a>
+                <a href="register.html"
+                   class="bg-[#0F766E] text-white px-5 py-2 rounded-lg hover:bg-[#115E59]">
+                    Get started
+                </a>
+            </div>
+           
+            <details class="relative md:hidden">
+                <summary class="cursor-pointer list-none border border-slate-300
+                                rounded-lg px-4 py-2 text-[#0F766E]">menu
+                </summary>
+                <div class="absolute right-0 top-12 w-56 bg-white shadow-lg
+                            border border-slate-200 rounded-xl p-5 z-50
+                            flex flex-col gap-4">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How it works</a>
+                    <a href="login.html">Log in</a>
+                    <a href="register.html"
+                       class="bg-[#0F766E] text-white text-center rounded-lg py-2">
+                        Get started
+                    </a>
+                </div>
+            </details>
+
+        </nav>
+    </header>
+    <main>
+        <section class="max-w-6xl mx-auto px-5 py-20
+                        grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <div>
+                <p class="text-[#0F766E] font-semibold mb-4">
+                    YOUR FITNESS JOURNEY STARTS HERE
+                </p>
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    Plan Your Workouts.
+                    <span class="text-[#0F766E]">
+                        Track Your Progress.
+                    </span>
+                </h1>
+
+                <p class="text-lg text-[#475569] mb-8">
+                    Build workout routines, log every set, and achieve
+                    your fitness goals in one simple place.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+
+                    <a href="register.html"
+                       class="bg-[#0F766E] text-white px-7 py-3 rounded-lg
+                              font-semibold text-center hover:bg-[#115E59]">
+                        Create free account
+                    </a>
+                    <a href="login.html"
+                       class="border-2 border-[#0F766E] text-[#0F766E]
+                              px-7 py-3 rounded-lg font-semibold text-center
+                              hover:bg-[#E6F4F1]">
+                        Log in
+                    </a>
+
+                </div>
+            </div>
+            <!-- Dashboard Preview -->
+            <div class="bg-white border border-slate-200 rounded-2xl shadow-lg p-6">
+
+                <div class="flex justify-between items-center gap-3 mb-6">
+                    <div>
+                        <h2 class="text-xl font-bold">Dashboard Preview</h2>
+                        <p class="text-sm text-[#475569]">
+                            Your weekly activity
+                        </p>
+                    </div>
+                    <span class="bg-[#E6F4F1] text-[#0F766E]
+                                 text-sm px-3 py-2 rounded-lg">
+                        This week
+                    </span>
+                </div>
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-[#E6F4F1] p-4 rounded-xl">
+                        <p class="text-sm text-[#475569]">Workouts</p>
+                        <h3 class="text-3xl font-bold text-[#0F766E] mt-2">
+                            4 / 5
+                        </h3>
+                        <p class="text-xs text-[#15803D] mt-2">
+                            On track
+                        </p>
+                    </div>
+                    <div class="bg-[#FFEDD5] p-4 rounded-xl">
+                        <p class="text-sm text-[#475569]">Current Streak</p>
+                        <h3 class="text-3xl font-bold text-[#C2410C] mt-2">
+                            7 Days
+                        </h3>
+                        <p class="text-xs text-[#C2410C] mt-2">
+                            Keep going!
+                        </p>
+                    </div>
+                </div>
+                <!-- Progress -->
+                <div class="border border-slate-200 rounded-xl p-5 mb-5">
+                    <div class="flex justify-between items-center mb-3">
+                        <h3 class="font-semibold">Weekly Goal</h3>
+                        <span class="font-semibold text-[#0F766E]">80%</span>
+                    </div>
+                    <div class="w-full h-3 bg-slate-200 rounded-full"
+                         role="progressbar"
+                         aria-label="Weekly workout goal"
+                         aria-valuenow="80"
+                         aria-valuemin="0"
+                         aria-valuemax="100">
+                        <div class="w-4/5 h-3 bg-[#0F766E] rounded-full"></div>
+                    </div>
+                    <p class="text-sm text-[#475569] mt-3">
+                        4 of 5 weekly workouts completed.
+                    </p>
+                </div>
+                <!-- Workout Card -->
+                <div class="bg-slate-50 p-4 rounded-xl">
+                    <h3 class="font-semibold mb-3">Today's Workout</h3>
+                    <div class="flex justify-between items-center gap-3">
+                        <div>
+                            <p class="font-semibold">Upper Body Strength</p>
+                            <p class="text-sm text-[#475569]">
+                                6 exercises · 45 minutes
+                            </p>
+                        </div>
+                        <span class="bg-[#E6F4F1] text-[#0F766E]
+                                     text-xs font-semibold px-3 py-2 rounded-lg">
+                            Planned
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features -->
+        <section id="features" class="bg-white py-20">
+            <div class="max-w-6xl mx-auto px-5">
+
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Everything You Need
+                    </h2>
+
+                    <p class="text-[#475569]">
+                        Simple tools to make your fitness journey easier.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Feature 1 -->
+                    <article class="bg-slate-50 border border-slate-200
+                                    rounded-xl p-7">
+
+                        <div class="w-12 h-12 bg-[#E6F4F1] text-[#0F766E]
+                                    rounded-lg flex items-center justify-center
+                                    font-bold text-xl mb-5">
+                            01
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">
+                            Plan Routines
+                        </h3>
+
+                        <p class="text-[#475569]">
+                            Create workout routines and organize your
+                            weekly training schedule.
+                        </p>
+                    </article>
+                    <!-- Feature 2 -->
+                    <article class="bg-slate-50 border border-slate-200
+                                    rounded-xl p-7">
+
+                        <div class="w-12 h-12 bg-[#E6F4F1] text-[#0F766E]
+                                    rounded-lg flex items-center justify-center
+                                    font-bold text-xl mb-5">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Log Every Set
+                        </h3>
+                        <p class="text-[#475569]">
+                            Record exercises, sets, reps, and weights
+                            after every workout.
+                        </p>
+                    </article>
+                    <!-- Feature 3 -->
+                    <article class="bg-slate-50 border border-slate-200
+                                    rounded-xl p-7">
+                        <div class="w-12 h-12 bg-[#E6F4F1] text-[#0F766E]
+                                    rounded-lg flex items-center justify-center
+                                    font-bold text-xl mb-5">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            See Progress
+                        </h3>
+
+                        <p class="text-[#475569]">
+                            Follow your workout history and see
+                            your improvements over time.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works -->
+        <section id="how-it-works" class="py-20">
+            <div class="max-w-6xl mx-auto px-5">
+
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        How It Works
+                    </h2>
+
+                    <p class="text-[#475569]">
+                        Get started in three simple steps.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-[#0F766E] text-white
+                                    rounded-full flex items-center justify-center
+                                    text-xl font-bold mx-auto mb-5">
+                            1
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">
+                            Create an Account
+                        </h3>
+
+                        <p class="text-[#475569]">
+                            Register for free to begin your journey.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-[#0F766E] text-white
+                                    rounded-full flex items-center justify-center
+                                    text-xl font-bold mx-auto mb-5">
+                            2
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3">
+                            Plan Your Workouts
+                        </h3>
+
+                        <p class="text-[#475569]">
+                            Choose exercises and organize your routine.
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="w-14 h-14 bg-[#0F766E] text-white
+                                    rounded-full flex items-center justify-center
+                                    text-xl font-bold mx-auto mb-5">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">
+                            Track Your Results
+                        </h3>
+
+                        <p class="text-[#475569]">
+                            Log your workouts and watch your progress.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Closing CTA -->
+        <section class="bg-[#0F766E] py-16">
+            <div class="max-w-4xl mx-auto px-5 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-5">
+                    Ready to Reach Your Fitness Goals?
+                </h2>
+                <p class="text-white mb-8 text-lg">
+                    Start planning your workouts and tracking your progress today.
+                </p>
+                <a href="register.html"
+                   class="inline-block bg-white text-[#0F766E]
+                          font-semibold px-8 py-4 rounded-lg
+                          hover:bg-[#E6F4F1]">
+                    Create Free Account
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+        <div class="max-w-6xl mx-auto px-5 flex flex-col
+                    md:flex-row justify-between items-center gap-4">
+
+            <a href="index.html"
+               class="text-xl font-bold text-[#0F766E]">
+                FitPlanner
+            </a>
+            <p class="text-sm text-[#475569] text-center">
+                © 2026 Rebwise. All rights reserved.
+            </p>
+            <div class="flex gap-5 text-sm">
+                <a href="#features"
+                   class="text-[#475569] hover:text-[#0F766E]">
+                    Features
+                </a>
+                <a href="#how-it-works"
+                   class="text-[#475569] hover:text-[#0F766E]">
+                    How it works
+                </a>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | Rebwise</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="min-h-screen grid grid-cols-1 lg:grid-cols-2">
+        <!-- Brand Panel (Desktop Only) -->
+        <section class="hidden lg:flex bg-[#0F766E] text-white
+                        p-12 flex-col justify-between">
+                        <img src="./images/gym.png"
+                        class="w-full h-80 object-cover rounded-2xl shadow-lg"
+            <a href="index.html" class="text-3xl font-bold">
+                FitPlanner
+            </a>
+            <!-- Brand Content -->
+            <div class="max-w-lg">
+                <h2 class="text-4xl font-bold leading-tight mb-5">
+                    Your fitness journey continues here.
+                </h2>
+                <p class="text-lg text-white mb-10">
+                    Plan your routines, track every workout,
+                    and stay motivated to reach your goals.
+                </p>
+                <!-- Small Dashboard Preview -->
+                <div class="bg-white rounded-2xl p-6 text-slate-900 shadow-xl">
+
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-bold text-lg">
+                            Weekly Progress
+                        </h3>
+                        <span class="text-sm bg-[#E6F4F1] text-[#0F766E]
+                                     px-3 py-1 rounded-lg">
+                            This Week
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+
+                        <div class="bg-[#E6F4F1] rounded-xl p-4">
+                            <p class="text-sm text-[#475569]">
+                                Workouts
+                            </p>
+                            <p class="text-2xl font-bold text-[#0F766E] mt-2">
+                                4 / 5
+                            </p>
+                        </div>
+                        <div class="bg-[#FFEDD5] rounded-xl p-4">
+                            <p class="text-sm text-[#475569]">
+                                Current Streak
+                            </p>
+                            <p class="text-2xl font-bold text-[#C2410C] mt-2">
+                                7 Days
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <p class="font-semibold text-sm">Weekly Goal</p>
+                        <p class="font-semibold text-sm text-[#0F766E]">
+                            80%
+                        </p>
+                    </div>
+                    <div class="w-full bg-slate-200 h-3 rounded-full"
+                         role="progressbar"
+                         aria-label="Weekly goal completion"
+                         aria-valuenow="80"
+                         aria-valuemin="0"
+                         aria-valuemax="100">
+
+                        <div class="bg-[#0F766E] h-3 w-4/5 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-sm text-white">
+                © 2026 FitPlanner. All rights reserved.
+            </p>
+        </section>
+        <!-- Login Form -->
+        <section class="flex items-center justify-center
+                        px-5 py-12 sm:px-8">
+
+            <div class="w-full max-w-md bg-white border border-slate-200
+                        rounded-2xl shadow-sm p-6 sm:p-10">
+
+                <!-- Mobile Logo -->
+                <a href="index.html"
+                   class="lg:hidden block text-2xl font-bold
+                          text-[#0F766E] mb-8">
+                    FitPlanner
+                </a>
+                <!-- Heading -->
+                <h1 class="text-3xl font-bold mb-3">
+                    Welcome back
+                </h1>
+                <p class="text-[#475569] mb-8">
+                    Log in to continue your fitness journey.
+                </p>
+                <!-- Form -->
+                <form action="#" method="get">
+                    <!-- Email -->
+                    <div class="mb-5">
+                        <label for="email"
+                               class="block font-semibold text-sm mb-2">
+                            Email Address
+                        </label>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter your email"
+                               autocomplete="email"
+                               required
+                               class="w-full px-4 py-3 border border-slate-300
+                                      rounded-lg outline-none
+                                      focus:border-[#0F766E]
+                                      focus:ring-2 focus:ring-[#0F766E]">
+                    </div>
+                    <div class="mb-5">
+                        <label for="password"
+                               class="block font-semibold text-sm mb-2">
+                            Password
+                        </label>
+                        <input type="password"
+                               id="password"
+                               name="password"
+                               placeholder="Enter your password"
+                               autocomplete="current-password"
+                               required
+                               class="w-full px-4 py-3 border border-slate-300
+                                      rounded-lg outline-none
+                                      focus:border-[#0F766E]
+                                      focus:ring-2 focus:ring-[#0F766E]">
+                    </div>
+                    <!-- Remember Me / Forgot Password -->
+                    <div class="flex flex-wrap justify-between
+                                items-center gap-3 mb-7">
+                        <label class="flex items-center gap-2
+                                      text-sm text-[#475569]">
+                            <input type="checkbox"
+                                   name="remember"
+                                   class="w-4 h-4 accent-[#0F766E]">
+                            Remember me
+                        </label>
+                        <a href="#"
+                           class="text-sm font-semibold text-[#0F766E]
+                                  hover:underline">
+                            Forgot password?
+                        </a>
+                    </div>
+                    <!-- Login Button -->
+                    <button type="button"
+                            class="w-full bg-[#0F766E] text-white
+                                   font-semibold py-3 rounded-lg
+                                   hover:bg-[#115E59]
+                                   focus:outline-none focus:ring-2
+                               focus:ring-[#0F766E]">
+                        Log in
+                    </button>
+                </form>
+                <!-- Register Link -->
+                <p class="text-center text-sm text-[#475569] mt-7">
+                    Don't have an account?
+                    <a href="register.html"
+                       class="font-semibold text-[#0F766E]
+                              hover:underline">
+                        Register
+                    </a>
+                </p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
