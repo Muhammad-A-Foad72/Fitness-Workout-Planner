@@ -2,6 +2,9 @@
   "name": "fitness-workout-planner",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "description": "SW 302 Fitness & Workout Planner — Phase 2 static prototype setup",
   "scripts": {
     "dev": "tailwindcss -i ./frontend/src/styles/input.css -o ./frontend/assets/css/tailwind.css --watch",
