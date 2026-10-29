@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en" class="motion-safe:scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard · RepWise</title>
+    <meta name="description" content="Your week at a glance: workouts, streak, calories, minutes and muscle groups.">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:ital,wght@1,600;1,700&display=swap">
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="lg:flex">
+      <header class="sticky top-0 hidden h-dvh w-64 shrink-0 flex-col gap-6 overflow-y-auto border-r border-line bg-surface px-4 py-6 lg:flex">
+        <a href="dashboard.html" class="flex items-center gap-2">
+          <span class="grid size-8 place-items-center rounded-lg bg-primary font-display font-bold text-on-primary" aria-hidden="true">R</span>
+          <span class="font-display text-xl font-bold">RepWise</span>
+        </a>
+        <nav aria-label="Main">
+          <ul class="flex flex-col gap-1">
+            <li>
+              <a href="dashboard.html" class="nav-link" aria-current="page">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="exercises.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"/><path d="m2.5 21.5 1.4-1.4"/><path d="m20.1 3.9 1.4-1.4"/><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"/><path d="m9.6 14.4 4.8-4.8"/></svg>
+                Exercises
+              </a>
+            </li>
+            <li>
+              <a href="routine-builder.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/></svg>
+                Routines
+              </a>
+            </li>
+            <li>
+              <a href="workout.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+                Workout
+              </a>
+            </li>
+            <li>
+              <a href="profile.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+                Profile &amp; Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mt-auto flex items-center gap-3">
+          <span class="grid size-10 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">NA</span>
+          <div>
+            <p class="text-sm font-medium">Nour Adel</p>
+            <p class="text-sm text-ink-muted">Goal: build strength</p>
+          </div>
+        </div>
+      </header>
+      <div class="min-w-0 flex-1">
+        <header class="sticky top-0 z-20 flex h-14 items-center justify-between border-b border-line bg-surface pr-4 pl-2 lg:hidden">
+          <button type="button" class="icon-btn" popovertarget="menu" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></button>
+          <a href="dashboard.html" class="flex items-center gap-2">
+            <span class="grid size-8 place-items-center rounded-lg bg-primary font-display font-bold text-on-primary" aria-hidden="true">R</span>
+            <span class="font-display text-xl font-bold">RepWise</span>
+          </a>
+          <span class="grid size-8 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">NA</span>
+        </header>
+        <main id="main" class="mx-auto flex w-full max-w-page flex-col gap-4 px-4 pt-4 pb-8 sm:px-6 lg:gap-6 lg:px-8 lg:pt-8 lg:pb-12">
+          <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between md:gap-6">
+            <div>
+              <h1 class="font-display text-2xl font-semibold md:text-3xl">Welcome back, Nour</h1>
+              <p class="mt-1 text-ink-muted"><time datetime="2026-10-24">Saturday 24 October 2026</time></p>
+            </div>
+            <a href="workout.html" class="btn btn-primary">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
+              Start workout
+            </a>
+          </div>
+          <section aria-labelledby="summary-title">
+            <h2 id="summary-title" class="sr-only">Summary</h2>
+            <dl class="grid gap-4 md:grid-cols-3 md:gap-6">
+              <div class="card flex flex-col gap-3">
+                <dt class="flex items-center justify-between gap-3 text-sm font-medium text-ink-muted">
+                  Total workouts
+                  <span class="grid size-10 place-items-center rounded-full bg-primary-soft text-primary"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+                </dt>
+                <dd class="font-display text-3xl font-semibold tabular-nums">48</dd>
+                <dd class="text-sm text-ink-muted">5 this week</dd>
+              </div>
+              <div class="card flex flex-col gap-3">
+                <dt class="flex items-center justify-between gap-3 text-sm font-medium text-ink-muted">
+                  Active streak
+                  <span class="grid size-10 place-items-center rounded-full bg-accent-soft text-accent"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span>
+                </dt>
+                <dd class="font-display text-3xl font-semibold tabular-nums">6 days</dd>
+                <dd class="text-sm text-ink-muted">Planned rest days do not break it</dd>
+              </div>
+              <div class="card flex flex-col gap-3">
+                <dt class="flex items-center justify-between gap-3 text-sm font-medium text-ink-muted">
+                  Calories burned
+                  <span class="grid size-10 place-items-center rounded-full bg-accent-soft text-accent"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 4 4 6.5t3 5.5a1 1 0 0 1-14 0 5 5 0 0 1 1-3 1 1 0 0 0 5 0c0-2-1.5-3-1.5-5q0-2 2.5-4"/></svg></span>
+                </dt>
+                <dd class="font-display text-3xl font-semibold tabular-nums">12,480 kcal</dd>
+                <dd class="text-sm text-ink-muted">Estimated, all time</dd>
+              </div>
+            </dl>
+          </section>
+          <div class="flex flex-col gap-4 xl:flex-row xl:gap-6">
+            <figure class="card flex min-w-0 flex-1 flex-col gap-5">
+              <figcaption>
+                <h2 class="font-display text-xl font-semibold">Workout minutes</h2>
+                <p class="mt-1 text-sm text-ink-muted">Saturday 17 to Friday 23 October · 225 minutes in total</p>
+              </figcaption>
+              <div class="grid grid-cols-7 gap-2 pt-6 md:gap-4" aria-hidden="true">
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">45</span>
+                    <span class="h-3/4 w-5 shrink-0 rounded-t-md bg-primary md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Sat</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">0</span>
+                    <span class="h-0.5 w-5 shrink-0 bg-line-strong md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Sun</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">60</span>
+                    <span class="h-full w-5 shrink-0 rounded-t-md bg-primary md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Mon</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">30</span>
+                    <span class="h-1/2 w-5 shrink-0 rounded-t-md bg-primary md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Tue</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">50</span>
+                    <span class="h-5/6 w-5 shrink-0 rounded-t-md bg-primary md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Wed</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">0</span>
+                    <span class="h-0.5 w-5 shrink-0 bg-line-strong md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Thu</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                  <div class="flex h-35 w-full flex-col items-center justify-end gap-2 md:h-50">
+                    <span class="text-xs font-medium text-ink-muted">40</span>
+                    <span class="h-2/3 w-5 shrink-0 rounded-t-md bg-primary md:w-10"></span>
+                  </div>
+                  <span class="text-sm font-medium text-ink-muted">Fri</span>
+                </div>
+              </div>
+              <details class="group">
+                <summary class="inline-flex items-center gap-2 text-sm font-medium text-primary underline underline-offset-4">
+                  <svg class="icon size-5 group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  Show the numbers as a table
+                </summary>
+                <table class="mt-3 w-full text-left text-sm">
+                  <caption class="sr-only">Workout minutes per day, 17 to 23 October</caption>
+                  <thead>
+                    <tr class="border-b border-line text-ink-muted">
+                      <th scope="col" class="py-2 font-medium">Day</th>
+                      <th scope="col" class="py-2 text-right font-medium">Minutes</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-line">
+                    <tr><th scope="row" class="py-2 font-normal">Saturday</th><td class="py-2 text-right tabular-nums">45</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Sunday</th><td class="py-2 text-right tabular-nums">0</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Monday</th><td class="py-2 text-right tabular-nums">60</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Tuesday</th><td class="py-2 text-right tabular-nums">30</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Wednesday</th><td class="py-2 text-right tabular-nums">50</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Thursday</th><td class="py-2 text-right tabular-nums">0</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Friday</th><td class="py-2 text-right tabular-nums">40</td></tr>
+                  </tbody>
+                </table>
+              </details>
+            </figure>
+            <figure class="card flex flex-col gap-5 xl:w-105 xl:shrink-0">
+              <figcaption>
+                <h2 class="font-display text-xl font-semibold">Muscle groups</h2>
+                <p class="mt-1 text-sm text-ink-muted">Share of exercises logged this month</p>
+              </figcaption>
+              <div class="flex flex-col items-center gap-6 sm:flex-row">
+                <div class="relative size-40 shrink-0 rounded-full bg-[conic-gradient(var(--color-chart-legs)_0_30%,var(--color-chart-chest)_0_52%,var(--color-chart-back)_0_72%,var(--color-chart-cardio)_0_88%,var(--color-chart-core)_0)]" aria-hidden="true">
+                  <div class="absolute inset-1/5 rounded-full bg-surface"></div>
+                </div>
+                <ul class="flex w-full flex-col gap-3">
+                  <li class="flex items-center gap-3"><span class="size-3 shrink-0 rounded-sm bg-chart-legs"></span><span class="flex-1">Legs</span><span class="text-sm font-medium tabular-nums">30%</span></li>
+                  <li class="flex items-center gap-3"><span class="size-3 shrink-0 rounded-sm bg-chart-chest"></span><span class="flex-1">Chest</span><span class="text-sm font-medium tabular-nums">22%</span></li>
+                  <li class="flex items-center gap-3"><span class="size-3 shrink-0 rounded-sm bg-chart-back"></span><span class="flex-1">Back</span><span class="text-sm font-medium tabular-nums">20%</span></li>
+                  <li class="flex items-center gap-3"><span class="size-3 shrink-0 rounded-sm bg-chart-cardio"></span><span class="flex-1">Cardio</span><span class="text-sm font-medium tabular-nums">16%</span></li>
+                  <li class="flex items-center gap-3"><span class="size-3 shrink-0 rounded-sm bg-chart-core"></span><span class="flex-1">Core</span><span class="text-sm font-medium tabular-nums">12%</span></li>
+                </ul>
+              </div>
+              <details class="group">
+                <summary class="inline-flex items-center gap-2 text-sm font-medium text-primary underline underline-offset-4">
+                  <svg class="icon size-5 group-open:rotate-180" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                  Show the numbers as a table
+                </summary>
+                <table class="mt-3 w-full text-left text-sm">
+                  <caption class="sr-only">Share of exercises by muscle group this month</caption>
+                  <thead>
+                    <tr class="border-b border-line text-ink-muted">
+                      <th scope="col" class="py-2 font-medium">Muscle group</th>
+                      <th scope="col" class="py-2 text-right font-medium">Share</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-line">
+                    <tr><th scope="row" class="py-2 font-normal">Legs</th><td class="py-2 text-right tabular-nums">30%</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Chest</th><td class="py-2 text-right tabular-nums">22%</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Back</th><td class="py-2 text-right tabular-nums">20%</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Cardio</th><td class="py-2 text-right tabular-nums">16%</td></tr>
+                    <tr><th scope="row" class="py-2 font-normal">Core</th><td class="py-2 text-right tabular-nums">12%</td></tr>
+                  </tbody>
+                </table>
+              </details>
+            </figure>
+          </div>
+          <div class="flex flex-col gap-4 xl:flex-row xl:items-start xl:gap-6">
+            <section class="card flex flex-col items-start gap-4 xl:w-95 xl:shrink-0" aria-labelledby="next-title">
+              <span class="badge badge-primary">Up next</span>
+              <div>
+                <h2 id="next-title" class="font-display text-xl font-semibold">Upper Body Strength</h2>
+                <p class="mt-1 text-sm text-ink-muted"><time datetime="2026-10-26">Monday 26 October</time> · 4 exercises · 14 sets · about 45 min</p>
+              </div>
+              <ol class="flex w-full flex-col gap-2">
+                <li class="flex items-center gap-3"><span class="grid size-7 shrink-0 place-items-center rounded-full bg-surface-muted text-sm font-medium text-ink-muted" aria-hidden="true">1</span><span class="flex-1">Dumbbell Bench Press</span><span class="text-sm font-medium text-ink-muted">4 × 10</span></li>
+                <li class="flex items-center gap-3"><span class="grid size-7 shrink-0 place-items-center rounded-full bg-surface-muted text-sm font-medium text-ink-muted" aria-hidden="true">2</span><span class="flex-1">Bent-Over Row</span><span class="text-sm font-medium text-ink-muted">4 × 10</span></li>
+                <li class="flex items-center gap-3"><span class="grid size-7 shrink-0 place-items-center rounded-full bg-surface-muted text-sm font-medium text-ink-muted" aria-hidden="true">3</span><span class="flex-1">Overhead Press</span><span class="text-sm font-medium text-ink-muted">3 × 8</span></li>
+                <li class="flex items-center gap-3"><span class="grid size-7 shrink-0 place-items-center rounded-full bg-surface-muted text-sm font-medium text-ink-muted" aria-hidden="true">4</span><span class="flex-1">Push-Up</span><span class="text-sm font-medium text-ink-muted">3 × 12</span></li>
+              </ol>
+              <a href="workout.html" class="btn btn-secondary w-full">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
+                Start now
+              </a>
+            </section>
+            <section class="card grid min-w-0 flex-1 gap-4 md:grid-cols-[1fr_auto] md:items-center md:gap-5" aria-labelledby="recent-title">
+              <h2 id="recent-title" class="font-display text-xl font-semibold">Recent workouts</h2>
+              <div class="hidden overflow-x-auto rounded-xl border border-line md:col-span-2 md:block">
+                <table class="w-full text-left">
+                  <caption class="sr-only">Your last five workouts</caption>
+                  <thead class="bg-surface-muted text-sm text-ink-muted">
+                    <tr>
+                      <th scope="col" class="px-4 py-3 font-medium">Date</th>
+                      <th scope="col" class="px-4 py-3 font-medium">Routine</th>
+                      <th scope="col" class="px-4 py-3 font-medium">Duration</th>
+                      <th scope="col" class="px-4 py-3 font-medium">Est. calories</th>
+                    </tr>
+                  </thead>
+                  <tbody class="divide-y divide-line">
+                    <tr><td class="px-4 py-3.5"><time datetime="2026-10-23">Fri 23 Oct</time></td><td class="px-4 py-3.5 font-medium">Upper Body Strength</td><td class="px-4 py-3.5">40 min</td><td class="px-4 py-3.5">300 kcal</td></tr>
+                    <tr><td class="px-4 py-3.5"><time datetime="2026-10-21">Wed 21 Oct</time></td><td class="px-4 py-3.5 font-medium">Legs &amp; Core</td><td class="px-4 py-3.5">50 min</td><td class="px-4 py-3.5">410 kcal</td></tr>
+                    <tr><td class="px-4 py-3.5"><time datetime="2026-10-20">Tue 20 Oct</time></td><td class="px-4 py-3.5 font-medium">Cardio Intervals</td><td class="px-4 py-3.5">30 min</td><td class="px-4 py-3.5">320 kcal</td></tr>
+                    <tr><td class="px-4 py-3.5"><time datetime="2026-10-19">Mon 19 Oct</time></td><td class="px-4 py-3.5 font-medium">Upper Body Strength</td><td class="px-4 py-3.5">60 min</td><td class="px-4 py-3.5">430 kcal</td></tr>
+                    <tr><td class="px-4 py-3.5"><time datetime="2026-10-17">Sat 17 Oct</time></td><td class="px-4 py-3.5 font-medium">Full Body Basics</td><td class="px-4 py-3.5">45 min</td><td class="px-4 py-3.5">360 kcal</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <ul class="divide-y divide-line md:hidden">
+                <li class="flex items-center justify-between gap-3 py-3"><div><p class="font-medium">Upper Body Strength</p><p class="text-sm text-ink-muted"><time datetime="2026-10-23">Fri 23 Oct</time></p></div><div class="text-right"><p>40 min</p><p class="text-sm text-ink-muted">300 kcal</p></div></li>
+                <li class="flex items-center justify-between gap-3 py-3"><div><p class="font-medium">Legs &amp; Core</p><p class="text-sm text-ink-muted"><time datetime="2026-10-21">Wed 21 Oct</time></p></div><div class="text-right"><p>50 min</p><p class="text-sm text-ink-muted">410 kcal</p></div></li>
+                <li class="flex items-center justify-between gap-3 py-3"><div><p class="font-medium">Cardio Intervals</p><p class="text-sm text-ink-muted"><time datetime="2026-10-20">Tue 20 Oct</time></p></div><div class="text-right"><p>30 min</p><p class="text-sm text-ink-muted">320 kcal</p></div></li>
+                <li class="flex items-center justify-between gap-3 py-3"><div><p class="font-medium">Upper Body Strength</p><p class="text-sm text-ink-muted"><time datetime="2026-10-19">Mon 19 Oct</time></p></div><div class="text-right"><p>60 min</p><p class="text-sm text-ink-muted">430 kcal</p></div></li>
+                <li class="flex items-center justify-between gap-3 py-3"><div><p class="font-medium">Full Body Basics</p><p class="text-sm text-ink-muted"><time datetime="2026-10-17">Sat 17 Oct</time></p></div><div class="text-right"><p>45 min</p><p class="text-sm text-ink-muted">360 kcal</p></div></li>
+              </ul>
+              <div class="grid grid-cols-2 gap-3 md:col-start-2 md:row-start-1 md:flex">
+                <button type="button" class="btn btn-secondary"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Export CSV</button>
+                <button type="button" class="btn btn-secondary"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg>Export JSON</button>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="menu" popover class="h-dvh w-72 flex-col gap-6 bg-surface p-4 pb-6 text-ink shadow-xl backdrop:bg-scrim/50 open:flex">
+      <div class="flex items-center justify-between">
+        <a href="dashboard.html" class="flex items-center gap-2">
+          <span class="grid size-8 place-items-center rounded-lg bg-primary font-display font-bold text-on-primary" aria-hidden="true">R</span>
+          <span class="font-display text-xl font-bold">RepWise</span>
+        </a>
+        <button type="button" class="icon-btn" popovertarget="menu" popovertargetaction="hide" aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="flex flex-col gap-1">
+          <li>
+            <a href="dashboard.html" class="nav-link" aria-current="page">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="exercises.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"/><path d="m2.5 21.5 1.4-1.4"/><path d="m20.1 3.9 1.4-1.4"/><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"/><path d="m9.6 14.4 4.8-4.8"/></svg>
+              Exercises
+            </a>
+          </li>
+          <li>
+            <a href="routine-builder.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/></svg>
+              Routines
+            </a>
+          </li>
+          <li>
+            <a href="workout.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+              Workout
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+              Profile &amp; Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mt-auto flex items-center gap-3">
+        <span class="grid size-10 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">NA</span>
+        <div>
+          <p class="text-sm font-medium">Nour Adel</p>
+          <p class="text-sm text-ink-muted">Goal: build strength</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
