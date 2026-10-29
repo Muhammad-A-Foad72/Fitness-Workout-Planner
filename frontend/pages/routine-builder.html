@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en" class="motion-safe:scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create routine · RepWise</title>
+    <meta name="description" content="Build a routine: pick exercises and set your sets, reps and rest.">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Kanit:ital,wght@1,600;1,700&display=swap">
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="lg:flex">
+      <header class="sticky top-0 hidden h-dvh w-64 shrink-0 flex-col gap-6 overflow-y-auto border-r border-line bg-surface px-4 py-6 lg:flex">
+        <a href="dashboard.html" class="flex items-center gap-2">
+          <span class="grid size-8 place-items-center rounded-lg bg-primary font-display font-bold text-on-primary" aria-hidden="true">R</span>
+          <span class="font-display text-xl font-bold">RepWise</span>
+        </a>
+        <nav aria-label="Main">
+          <ul class="flex flex-col gap-1">
+            <li>
+              <a href="dashboard.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="exercises.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"/><path d="m2.5 21.5 1.4-1.4"/><path d="m20.1 3.9 1.4-1.4"/><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"/><path d="m9.6 14.4 4.8-4.8"/></svg>
+                Exercises
+              </a>
+            </li>
+            <li>
+              <a href="routine-builder.html" class="nav-link" aria-current="page">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/></svg>
+                Routines
+              </a>
+            </li>
+            <li>
+              <a href="workout.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+                Workout
+              </a>
+            </li>
+            <li>
+              <a href="profile.html" class="nav-link">
+                <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+                Profile &amp; Settings
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mt-auto flex items-center gap-3">
+          <span class="grid size-10 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">NA</span>
+          <div>
+            <p class="text-sm font-medium">Nour Adel</p>
+            <p class="text-sm text-ink-muted">Goal: build strength</p>
+          </div>
+        </div>
+      </header>
+      <div class="min-w-0 flex-1">
+        <header class="sticky top-0 z-20 flex h-14 items-center justify-between border-b border-line bg-surface pr-4 pl-2 lg:hidden">
+          <button type="button" class="icon-btn" popovertarget="menu" aria-label="Open menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></button>
+          <a href="dashboard.html" class="flex items-center gap-2">
+            <span class="grid size-8 place-items-center rounded-lg bg-primary font-display font-bold text-on-primary" aria-hidden="true">R</span>
+            <span class="font-display text-xl font-bold">RepWise</span>
+          </a>
+          <span class="grid size-8 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">NA</span>
+        </header>
+        <main id="main" class="mx-auto flex w-full max-w-page flex-col gap-4 px-4 pt-4 pb-24 sm:px-6 lg:gap-6 lg:px-8 lg:pt-8 xl:pb-12">
+          <div>
+            <h1 class="font-display text-2xl font-semibold md:text-3xl">Create routine</h1>
+            <p class="mt-1 text-ink-muted">Build the plan you will follow in the gym.</p>
+          </div>
+          <form id="routine-form" class="flex flex-col gap-4 xl:flex-row xl:items-start xl:gap-6" action="dashboard.html">
+            <div class="flex min-w-0 flex-1 flex-col gap-4 xl:gap-6">
+              <section class="card xl:hidden" aria-labelledby="summary-mobile-title">
+                <h2 id="summary-mobile-title" class="sr-only">Summary</h2>
+                <dl class="grid grid-cols-3 gap-2">
+                  <div class="flex flex-col-reverse rounded-xl bg-surface-muted px-3 py-2"><dt class="text-sm text-ink-muted">exercises</dt><dd class="font-display text-xl font-semibold tabular-nums">4</dd></div>
+                  <div class="flex flex-col-reverse rounded-xl bg-surface-muted px-3 py-2"><dt class="text-sm text-ink-muted">sets</dt><dd class="font-display text-xl font-semibold tabular-nums">14</dd></div>
+                  <div class="flex flex-col-reverse rounded-xl bg-surface-muted px-3 py-2"><dt class="text-sm text-ink-muted">minutes</dt><dd class="font-display text-xl font-semibold tabular-nums">45</dd></div>
+                </dl>
+              </section>
+              <section class="card flex flex-col gap-5" aria-labelledby="details-title">
+                <h2 id="details-title" class="font-display text-xl font-semibold">Details</h2>
+                <div>
+                  <label for="name" class="field-label">Routine name</label>
+                  <input id="name" name="name" class="field" required aria-describedby="name-hint" value="Upper Body Strength">
+                  <p id="name-hint" class="field-hint">Required. Shown on your dashboard.</p>
+                </div>
+                <div>
+                  <label for="description" class="field-label">Description (optional)</label>
+                  <textarea id="description" name="description" rows="3" class="field h-auto min-h-24 py-3">Push and pull day for chest, back and shoulders.</textarea>
+                </div>
+                <fieldset>
+                  <legend class="field-label">Training days</legend>
+                  <div class="mt-1 flex flex-wrap gap-x-4">
+                    <label class="option"><input type="checkbox" name="days" value="sat" class="check">Sat</label>
+                    <label class="option"><input type="checkbox" name="days" value="sun" class="check">Sun</label>
+                    <label class="option"><input type="checkbox" name="days" value="mon" class="check" checked>Mon</label>
+                    <label class="option"><input type="checkbox" name="days" value="tue" class="check">Tue</label>
+                    <label class="option"><input type="checkbox" name="days" value="wed" class="check">Wed</label>
+                    <label class="option"><input type="checkbox" name="days" value="thu" class="check">Thu</label>
+                    <label class="option"><input type="checkbox" name="days" value="fri" class="check" checked>Fri</label>
+                  </div>
+                </fieldset>
+              </section>
+              <section class="card flex flex-col gap-4" aria-labelledby="exercises-title">
+                <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div>
+                    <h2 id="exercises-title" class="font-display text-xl font-semibold">Exercises</h2>
+                    <p class="text-sm text-ink-muted">4 exercises · 14 sets</p>
+                  </div>
+                  <a href="exercises.html" class="btn btn-secondary"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>Add exercise</a>
+                </div>
+                <ol class="@container flex flex-col gap-3">
+                  <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 rounded-xl border border-line bg-surface p-4 @2xl:flex @2xl:gap-4">
+                    <span class="grid size-8 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">1</span>
+                    <div class="min-w-0 @2xl:flex-1">
+                      <p class="font-medium">Dumbbell Bench Press</p>
+                      <p class="text-sm text-ink-muted">Chest · Dumbbell</p>
+                    </div>
+                    <div class="col-span-full grid grid-cols-3 gap-3 @2xl:flex @2xl:gap-4">
+                      <div class="@2xl:w-22">
+                        <label for="sets-1" class="field-label">Sets</label>
+                        <input id="sets-1" name="sets-1" type="number" class="field" min="1" max="10" value="4">
+                      </div>
+                      <div class="@2xl:w-22">
+                        <label for="reps-1" class="field-label">Reps</label>
+                        <input id="reps-1" name="reps-1" type="number" class="field" min="1" max="50" value="10">
+                      </div>
+                      <div class="@2xl:w-26">
+                        <label for="rest-1" class="field-label">Rest (s)</label>
+                        <input id="rest-1" name="rest-1" type="number" class="field" min="0" max="300" step="15" value="90">
+                      </div>
+                    </div>
+                    <div class="col-span-full grid gap-3 @2xs:grid-cols-2 @2xl:flex @2xl:gap-1">
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted" disabled><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg><span class="@2xl:sr-only">Move up</span><span class="sr-only"> Dumbbell Bench Press</span></button>
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg><span class="@2xl:sr-only">Move down</span><span class="sr-only"> Dumbbell Bench Press</span></button>
+                    </div>
+                    <button type="button" class="icon-btn col-start-3 row-start-1 text-danger" aria-label="Remove Dumbbell Bench Press"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                  </li>
+                  <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 rounded-xl border border-line bg-surface p-4 @2xl:flex @2xl:gap-4">
+                    <span class="grid size-8 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">2</span>
+                    <div class="min-w-0 @2xl:flex-1">
+                      <p class="font-medium">Bent-Over Row</p>
+                      <p class="text-sm text-ink-muted">Back · Barbell</p>
+                    </div>
+                    <div class="col-span-full grid grid-cols-3 gap-3 @2xl:flex @2xl:gap-4">
+                      <div class="@2xl:w-22">
+                        <label for="sets-2" class="field-label">Sets</label>
+                        <input id="sets-2" name="sets-2" type="number" class="field" min="1" max="10" value="4">
+                      </div>
+                      <div class="@2xl:w-22">
+                        <label for="reps-2" class="field-label">Reps</label>
+                        <input id="reps-2" name="reps-2" type="number" class="field" min="1" max="50" value="10">
+                      </div>
+                      <div class="@2xl:w-26">
+                        <label for="rest-2" class="field-label">Rest (s)</label>
+                        <input id="rest-2" name="rest-2" type="number" class="field" min="0" max="300" step="15" value="90">
+                      </div>
+                    </div>
+                    <div class="col-span-full grid gap-3 @2xs:grid-cols-2 @2xl:flex @2xl:gap-1">
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg><span class="@2xl:sr-only">Move up</span><span class="sr-only"> Bent-Over Row</span></button>
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg><span class="@2xl:sr-only">Move down</span><span class="sr-only"> Bent-Over Row</span></button>
+                    </div>
+                    <button type="button" class="icon-btn col-start-3 row-start-1 text-danger" aria-label="Remove Bent-Over Row"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                  </li>
+                  <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 rounded-xl border border-line bg-surface p-4 @2xl:flex @2xl:gap-4">
+                    <span class="grid size-8 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">3</span>
+                    <div class="min-w-0 @2xl:flex-1">
+                      <p class="font-medium">Overhead Press</p>
+                      <p class="text-sm text-ink-muted">Shoulders · Barbell</p>
+                    </div>
+                    <div class="col-span-full grid grid-cols-3 gap-3 @2xl:flex @2xl:gap-4">
+                      <div class="@2xl:w-22">
+                        <label for="sets-3" class="field-label">Sets</label>
+                        <input id="sets-3" name="sets-3" type="number" class="field" min="1" max="10" value="3">
+                      </div>
+                      <div class="@2xl:w-22">
+                        <label for="reps-3" class="field-label">Reps</label>
+                        <input id="reps-3" name="reps-3" type="number" class="field" min="1" max="50" value="8">
+                      </div>
+                      <div class="@2xl:w-26">
+                        <label for="rest-3" class="field-label">Rest (s)</label>
+                        <input id="rest-3" name="rest-3" type="number" class="field" min="0" max="300" step="15" value="120">
+                      </div>
+                    </div>
+                    <div class="col-span-full grid gap-3 @2xs:grid-cols-2 @2xl:flex @2xl:gap-1">
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg><span class="@2xl:sr-only">Move up</span><span class="sr-only"> Overhead Press</span></button>
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg><span class="@2xl:sr-only">Move down</span><span class="sr-only"> Overhead Press</span></button>
+                    </div>
+                    <button type="button" class="icon-btn col-start-3 row-start-1 text-danger" aria-label="Remove Overhead Press"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                  </li>
+                  <li class="grid grid-cols-[auto_1fr_auto] items-center gap-3 rounded-xl border border-line bg-surface p-4 @2xl:flex @2xl:gap-4">
+                    <span class="grid size-8 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">4</span>
+                    <div class="min-w-0 @2xl:flex-1">
+                      <p class="font-medium">Push-Up</p>
+                      <p class="text-sm text-ink-muted">Chest · Bodyweight</p>
+                    </div>
+                    <div class="col-span-full grid grid-cols-3 gap-3 @2xl:flex @2xl:gap-4">
+                      <div class="@2xl:w-22">
+                        <label for="sets-4" class="field-label">Sets</label>
+                        <input id="sets-4" name="sets-4" type="number" class="field" min="1" max="10" value="3">
+                      </div>
+                      <div class="@2xl:w-22">
+                        <label for="reps-4" class="field-label">Reps</label>
+                        <input id="reps-4" name="reps-4" type="number" class="field" min="1" max="50" value="12">
+                      </div>
+                      <div class="@2xl:w-26">
+                        <label for="rest-4" class="field-label">Rest (s)</label>
+                        <input id="rest-4" name="rest-4" type="number" class="field" min="0" max="300" step="15" value="60">
+                      </div>
+                    </div>
+                    <div class="col-span-full grid gap-3 @2xs:grid-cols-2 @2xl:flex @2xl:gap-1">
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg><span class="@2xl:sr-only">Move up</span><span class="sr-only"> Push-Up</span></button>
+                      <button type="button" class="btn btn-secondary @2xl:size-11 @2xl:border-0 @2xl:bg-transparent @2xl:px-0 @2xl:hover:bg-surface-muted" disabled><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg><span class="@2xl:sr-only">Move down</span><span class="sr-only"> Push-Up</span></button>
+                    </div>
+                    <button type="button" class="icon-btn col-start-3 row-start-1 text-danger" aria-label="Remove Push-Up"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+                  </li>
+                </ol>
+              </section>
+            </div>
+            <aside class="hidden flex-col gap-6 xl:sticky xl:top-8 xl:flex xl:w-80 xl:shrink-0" aria-labelledby="summary-title">
+              <section class="card flex flex-col gap-4">
+                <h2 id="summary-title" class="font-display text-xl font-semibold">Summary</h2>
+                <dl class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between gap-3"><dt class="text-ink-muted">Exercises</dt><dd class="font-medium">4</dd></div>
+                  <div class="flex items-center justify-between gap-3"><dt class="text-ink-muted">Total sets</dt><dd class="font-medium">14</dd></div>
+                  <div class="flex items-center justify-between gap-3"><dt class="text-ink-muted">Estimated time</dt><dd class="font-medium">About 45 min</dd></div>
+                  <div class="flex items-center justify-between gap-3"><dt class="text-ink-muted">Training days</dt><dd class="font-medium">Mon, Fri</dd></div>
+                </dl>
+                <div class="flex flex-col gap-3 border-t border-line pt-4">
+                  <button type="submit" class="btn btn-primary w-full"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Save routine</button>
+                  <a href="dashboard.html" class="btn btn-secondary w-full">Cancel</a>
+                </div>
+              </section>
+              <p class="flex gap-3 rounded-2xl bg-primary-soft p-4 text-sm md:p-6"><svg class="icon size-5 text-primary" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Put the hardest lift first, while you are fresh.</p>
+            </aside>
+          </form>
+          <div class="fixed inset-x-0 bottom-0 z-10 flex gap-3 border-t border-line bg-surface px-4 py-3 lg:left-64 xl:hidden">
+            <a href="dashboard.html" class="btn btn-secondary">Cancel</a>
+            <button type="submit" form="routine-form" class="btn btn-primary flex-1"><svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Save routine</button>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="menu" popover class="h-dvh w-72 flex-col gap-6 bg-surface p-4 pb-6 text-ink shadow-xl backdrop:bg-scrim/50 open:flex">
+      <div class="flex items-center justify-between">
+        <a href="dashboard.html" class="flex items-center gap-2">
+          <span class="grid size-8 place-items-center rounded-lg bg-primary font-display font-bold text-on-primary" aria-hidden="true">R</span>
+          <span class="font-display text-xl font-bold">RepWise</span>
+        </a>
+        <button type="button" class="icon-btn" popovertarget="menu" popovertargetaction="hide" aria-label="Close menu"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+      </div>
+      <nav aria-label="Main">
+        <ul class="flex flex-col gap-1">
+          <li>
+            <a href="dashboard.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="exercises.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.596 12.768a2 2 0 1 0 2.829-2.829l-1.768-1.767a2 2 0 0 0 2.828-2.829l-2.828-2.828a2 2 0 0 0-2.829 2.828l-1.767-1.768a2 2 0 1 0-2.829 2.829z"/><path d="m2.5 21.5 1.4-1.4"/><path d="m20.1 3.9 1.4-1.4"/><path d="M5.343 21.485a2 2 0 1 0 2.829-2.828l1.767 1.768a2 2 0 1 0 2.829-2.829l-6.364-6.364a2 2 0 1 0-2.829 2.829l1.768 1.767a2 2 0 0 0-2.828 2.829z"/><path d="m9.6 14.4 4.8-4.8"/></svg>
+              Exercises
+            </a>
+          </li>
+          <li>
+            <a href="routine-builder.html" class="nav-link" aria-current="page">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 5h8"/><path d="M13 12h8"/><path d="M13 19h8"/><path d="m3 17 2 2 4-4"/><path d="m3 7 2 2 4-4"/></svg>
+              Routines
+            </a>
+          </li>
+          <li>
+            <a href="workout.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><line x1="10" x2="14" y1="2" y2="2"/><line x1="12" x2="15" y1="14" y2="11"/><circle cx="12" cy="14" r="8"/></svg>
+              Workout
+            </a>
+          </li>
+          <li>
+            <a href="profile.html" class="nav-link">
+              <svg class="icon size-5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>
+              Profile &amp; Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="mt-auto flex items-center gap-3">
+        <span class="grid size-10 place-items-center rounded-full bg-primary-soft text-sm font-medium text-primary" aria-hidden="true">NA</span>
+        <div>
+          <p class="text-sm font-medium">Nour Adel</p>
+          <p class="text-sm text-ink-muted">Goal: build strength</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
